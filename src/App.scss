@@ -1,0 +1,91 @@
+$color1: rgb(225, 225, 225);
+$color2: rgb(180, 180, 180);
+$color3: rgb(135, 135, 135);
+$color4: rgb(90, 90, 90);
+$color5: rgb(45, 45, 45);
+
+$text-color: #323232;
+$green: rgb(153, 199, 148);
+$black: #161616;
+iframe{display: none;}
+*{box-sizing: border-box;}
+.container{
+  width: 40vw;
+  height: 30vw;
+  margin: 5vw 30vw;
+  padding: 0.5vw;
+}
+
+.addMarker{
+  margin: 0 1.5vw;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+input[type=file]{
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+label:hover{
+  cursor: pointer;
+}
+
+.markersList {
+  background-color: $color3;
+  color: $text-color;
+  width: 100%;
+  height: 4vw;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+.markersList::-webkit-scrollbar{
+  display: none;
+  visibility: hidden;
+}
+.markers{
+  width: auto;
+  height: 80%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.markers ul{
+  height: 80%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  white-space: nowrap;
+}
+
+.markers li, .marker{
+  display: inline-block;
+  width: 5vw;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marker img{
+  object-fit: contain;
+  max-width: 10vw;
+  max-height: 10vw;
+}
+
+.markers li{
+  margin: 0 0.2vw;
+  transition: 0.2s ease-in-out;
+}
+.markers ul li:hover{
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 0 3px $color5;
+  cursor: pointer;
+}
+
+.markers .isActive{
+  border: 2px solid $color5;
+}
